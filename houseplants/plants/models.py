@@ -34,6 +34,9 @@ class Species(models.Model):
         default='MEDIUM',
     )
 
+    def __str__(self):
+        return self.common_name
+
 
 class Plant(models.Model):
     nick_name = models.CharField(max_length=200, blank=True, null=True)
@@ -46,3 +49,6 @@ class Plant(models.Model):
     adoption_date = models.DateTimeField('adoption date')
     profile_pic = models.ImageField()
     location = models.CharField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return self.nick_name

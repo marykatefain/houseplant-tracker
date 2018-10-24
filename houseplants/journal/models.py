@@ -6,6 +6,9 @@ from houseplants.plants.models import Plant
 class JournalTag(models.Model):
     tag = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.tag
+
 
 class JournalEntry(models.Model):
     publish_date = models.DateTimeField(
@@ -23,3 +26,6 @@ class JournalEntry(models.Model):
         JournalTag,
         blank=True,
     )
+
+    def __str__(self):
+        return self.publish_date

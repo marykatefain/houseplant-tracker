@@ -6,9 +6,9 @@ from .models import JournalTag, JournalEntry
 
 @admin.register(JournalTag)
 class JournalTagAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('tag',)
 
 
 @admin.register(JournalEntry)
 class JournalEntryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('publish_date', 'plant')
