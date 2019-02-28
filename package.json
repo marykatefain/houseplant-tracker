@@ -1,0 +1,26 @@
+{
+  "name": "houseplant-tracker",
+  "version": "1.0.0",
+  "description": "A web app to track your plant progress, create care schedules, and get help.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "parcel watch ./houseplants/plants/js/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marykatefain/houseplant-tracker.git"
+  },
+  "author": "MKF",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/marykatefain/houseplant-tracker/issues"
+  },
+  "homepage": "https://github.com/marykatefain/houseplant-tracker#readme",
+  "dependencies": {
+    "vue": "^2.6.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
+  }
+}

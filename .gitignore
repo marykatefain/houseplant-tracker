@@ -8,3 +8,5 @@ __pycache__
 /db.dump
 /docs/_build
 .coverage
+.cache/
+dist/
