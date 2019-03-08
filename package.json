@@ -18,9 +18,19 @@
   },
   "homepage": "https://github.com/marykatefain/houseplant-tracker#readme",
   "dependencies": {
-    "vue": "^2.6.3"
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link-context": "^1.0.15",
+    "apollo-link-http": "^1.5.12",
+    "cookie": "^0.3.1",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "vue": "^2.6.8",
+    "vue-hot-reload-api": "^2.3.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.11.0"
+    "@vue/component-compiler-utils": "^2.6.0",
+    "parcel-bundler": "^1.11.0",
+    "vue-template-compiler": "^2.6.8"
   }
 }
