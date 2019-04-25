@@ -46,8 +46,8 @@ class Plant(models.Model):
         blank=True,
         null=True
     )
-    adoption_date = models.DateTimeField('adoption date')
-    profile_pic = models.ImageField()
+    adoption_date = models.DateTimeField('adoption date', blank=True, null=True)
+    profile_pic = models.ImageField(blank=True, null=True)
     location = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):

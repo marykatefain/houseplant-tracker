@@ -23,6 +23,11 @@ Make sure you have sourced the virtual environment for your shell session:
 source env/bin/activate
 ```
 
+Run watcher
+```
+npm run watch
+``` 
+
 Run migrations
 ```
 python manage.py migrate

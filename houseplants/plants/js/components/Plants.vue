@@ -1,4 +1,5 @@
 <template>
+  <!-- hellodfdsfds -->
   <div class="hello">
     <h1>PLANTS VUE WOO</h1>
     <a @click="fetchPlants">Get the plants</a>
@@ -17,6 +18,11 @@
         {{ plant.species.lightRequirement }}
       </div>
   </div>
+  <form>
+    <label>Nickname:</label>
+    <input type="text" name="nickName">
+    <button @click.prevent="addPlant">Submit</button>
+  </form>
 </template>
 
 <script>
@@ -28,12 +34,18 @@ export default {
   data() {
     return {
       plants: []
+
     }
   },
   created() {
     this.fetchPlants()
   },
   methods: {
+    addPlant(e){
+      // e.preventDefault()
+      console.log("add plant")
+      console.log("more")
+    },
     fetchPlants(){
       const query = gql(`
         query{
