@@ -13,7 +13,7 @@ class JournalTag(models.Model):
 class JournalEntry(models.Model):
     publish_date = models.DateTimeField(
         'publish date',
-        default=timezone.now()
+        default=timezone.now
         )
     plant = models.ForeignKey(
         Plant,
