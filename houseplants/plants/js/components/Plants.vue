@@ -7,7 +7,7 @@
       <div>
         {{ plant.nickName }}
       </div>
-      <div>
+      <!-- <div>
         {{ plant.species.commonName }}
         ( {{ plant.species.scientificName}} )
       </div>
@@ -16,7 +16,7 @@
       </div>
       <div>
         {{ plant.species.lightRequirement }}
-      </div>
+      </div> -->
   </div>
   <form>
     <label>Nickname:</label>
@@ -44,7 +44,18 @@ export default {
     addPlant(e){
       // e.preventDefault()
       console.log("add plant")
-      console.log("more")
+      const plantMutation = gql(`
+        mutation PlantMutation($nickName: String!) {
+          addPlant(nickName: $nickName) {
+            plant{
+              id
+              nickName
+            }
+          }
+        }
+      `)
+
+      client.mutate({mutation: plantMutation, variables: {nickName: "platy"} })
     },
     fetchPlants(){
       const query = gql(`
